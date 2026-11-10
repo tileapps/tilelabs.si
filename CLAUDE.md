@@ -39,7 +39,7 @@ undecided ("Snow" is a working name and is not on the page).
 - **No customer record, no health detail** on the page or in a demo; every name in a demo is invented.
 - **Environment variables** reach neither the build nor the runtime dependably. There are none; if one is needed it is named in the `env`
   block of `next.config.ts`, and only when it has a value.
-- **Commit as** `Claude <noreply@anthropic.com>`: `git -c user.email=noreply@anthropic.com -c user.name=Claude commit …`
+- **Commit as** `Claude <commits@tilelabs.si>`: `git -c user.email=commits@tilelabs.si -c user.name=Claude commit …`
 
 ## AWS (no deploys from here)
 
