@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { Brand } from './Bits';
 import HipaaMark from './HipaaMark';
+import { PadlockArt, SealedPageArt } from './FootMarks';
 import LangMenu from './LangMenu';
 import { FRAME, legalPath, type Doc, type Lang } from '@/lib/legal-words';
 
@@ -16,8 +17,11 @@ export default function Footer({ home = false, lang = 'en', doc = 'home' }: { /*
           <Brand href={home ? (lang === 'en' ? '/' : `/${lang}`) : '#top'} />
           <span className="legal">© 2026 Tile Private Limited</span>
           <span className="links">
-            <a href={legalPath(lang, 'privacy')}>{f.privacyLink}</a><a href={legalPath(lang, 'terms')}>{f.termsLink}</a>
-            <HipaaMark label={f.hipaa} />
+            <span className="marks">
+              <a className="foot-mark" href={legalPath(lang, 'privacy')} target="_blank" rel="noopener noreferrer" aria-label={f.privacyLink} title={f.privacyLink}><PadlockArt /></a>
+              <a className="foot-mark" href={legalPath(lang, 'terms')} target="_blank" rel="noopener noreferrer" aria-label={f.termsLink} title={f.termsLink}><SealedPageArt /></a>
+              <HipaaMark label={f.hipaa} />
+            </span>
             <button className="cookie" type="button" onClick={() => cookies.current?.showModal()}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 4 4 0 0 1-4-4 4 4 0 0 1-5-5z" /><circle cx="9" cy="10" r=".8" fill="currentColor" /><circle cx="13" cy="15" r=".8" fill="currentColor" /><circle cx="8.5" cy="14.5" r=".8" fill="currentColor" /></svg>{f.cookies}</button>
             <LangMenu lang={lang} doc={doc} up />
           </span>

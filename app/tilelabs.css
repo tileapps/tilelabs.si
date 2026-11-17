@@ -628,5 +628,9 @@ footer a, footer .legal, footer .hipaa, footer .cookie { color: var(--chrome-ink
 #what { background: var(--band); border-block: 1px solid var(--band-line); color: var(--ink); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) :is(.top, footer, #what) { --bg: #fafafc; --surface: #ffffff; --ink: #19192b; --ink-2: #4b4b66; --ink-3: #7d7d96; --line: #e4e4ee; --tile: #e8e6f3; --tile-2: #dedbee; --accent: #5e2ced; --accent-ink: #ffffff; --accent-soft: #efe9ff; --g1: #1741c4; --g2: #0e8f8a; --g3: #f2b134; --g4: #d9455f; color-scheme: light; } }
 :root[data-theme="dark"] :is(.top, footer, #what) { --bg: #fafafc; --surface: #ffffff; --ink: #19192b; --ink-2: #4b4b66; --ink-3: #7d7d96; --line: #e4e4ee; --tile: #e8e6f3; --tile-2: #dedbee; --accent: #5e2ced; --accent-ink: #ffffff; --accent-soft: #efe9ff; --g1: #1741c4; --g2: #0e8f8a; --g3: #f2b134; --g4: #d9455f; color-scheme: light; }
+.marks { display: inline-flex; align-items: center; margin-block: -3px; } /* the foot's marks (17 November 2026) sit shoulder to shoulder */
+.foot-mark { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; line-height: 0; text-decoration: none; }
+.foot-mark:focus-visible { outline: 2px solid var(--accent, #5e2ced); outline-offset: 2px; }
+.foot-mark svg { display: block; flex: none; }
 .hipaa-mark { display: inline-flex; align-items: center; color: inherit; text-decoration: none; padding: 2px 4px; }
 .hipaa-mark:focus-visible { outline: 2px solid var(--accent, #5e2ced); outline-offset: 2px; }
